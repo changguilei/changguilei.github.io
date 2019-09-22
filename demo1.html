@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+        <!--[if lt ie 9]>
+        <script type="text/javascript" src="lib/html5shiv/html5shiv.min.js"></script>
+        <script type="text/javascript" src="lib/respond/respond.js"></script>
+        <![endif] -->
+        <style type="text/css">
+                    .form-box{
+                        margin:0 !important;
+                    }
+                      span{
+                        margin-top: 100px;
+                        display: inline-block;
+                        margin-left: 100px;
+                    }
+
+                    .box1{
+                        width: 0;
+                        height: 0;
+                        border-radius:50%;
+                        border-top:100px solid red;
+                        border-bottom:100px solid blue;
+                        border-left: 100px solid cyan;
+                        border-right:100px solid purple;
+                    }
+
+                    .box2{
+                        width: 0;
+                        height: 0;
+                        border-top:100px solid red;
+                        border-bottom:100px solid #fff;
+                        border-left: 100px solid transparent;
+                        border-right:100px solid transparent;
+                        /*实现三角形的原理是将其他几个角背景色设为透明隐藏*/
+                    }
+                    .box3{
+                        width: 400px;
+                        height: 400px;
+                        line-height: 400px;
+                        background-color:yellow;
+                    }
+                    .box3  button{
+                            width: 140px;
+                            height: 120px;
+                    }
+        </style>
+        <script type="text/javascript" src="js/global.js"></script>
+        <script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <form action="" class="form-horizontal">
+            <div class="form-group form-box">
+                <label for="name"  class="col-lg-2 control-label">用户名：</label>
+                <div class="col-lg-4">
+                    <input type="text" id="name" class="form-control"  placeholder="请输入你的用户名" />
+                </div>
+            </div>
+        </form>
+        <span>1232</span>
+
+        <div class="box1"></div>
+        <div class="box2"></div>
+
+        <div class="box3 center-block"><button class="bnt btn-primary  btn-sm">dadadw二维 分</button></div>
+    </body>
+</html>

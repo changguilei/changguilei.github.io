@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+        <!--[if lt ie 9]>
+        <script type="text/javascript" src="lib/html5shiv/html5shiv.min.js"></script>
+        <script type="text/javascript" src="lib/respond/respond.js"></script>
+        <![endif] -->
+        <script type="text/javascript" src="js/global.js"></script>
+        <script type="text/javascript" src="js/template-native.js"></script>
+        <script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="lib/underscore/underscore-min.js"></script>
+        <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+       <div class="content"></div>
+ 
+    </body>
+</html>
+
+<script type="text/tmp" id="tmp1">
+        <% for(var i  in content){%>
+            <%if(content[i].city.length>2){%>
+              <dl>
+                  <dt><%=content[i].province%></dt>
+                  <dd><%=content[i].city[0]%></dd>
+                  <dd><%=content[i].city[1]%></dd>
+                  <dd><%-content[i].city[2]%></dd>
+              </dl>
+            <%}%>
+             <%}%>
+</script>
+
+
+<script  type="text/javascript">
+    var data={
+    content:[
+      {province:'四川',city:['成都','绵阳','']},
+      {province:'广东',city:['广州','东莞','佛山']},
+      {province:'海南',city:['海口','三亚',"<script>alert(123)<\/script>"]}
+    ]
+  };
+    var str=_.template($("#tmp1").html());
+    $(".content").html(str(data));
+</script>
+

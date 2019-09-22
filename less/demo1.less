@@ -1,0 +1,24 @@
+@charset "utf-8";
+/*也就是说less语法中的变量、mixin混入、嵌套、import、运算、内置函数等不属于css的东西，在编译后的css文件中依然不会有。
+*/
+//单行注释不会编译，只有多行注释才会编译！
+@theme-color: #ef2322;
+body {
+  color: @theme-color;
+}
+
+.a {
+  border-left: 1px solid red;
+}
+
+.b() {
+  border-right: 1px solid blue;
+}
+
+div {
+  background-color: @theme-color;
+  .a();
+  .b(); //混入
+}
+
+@import "demo2.less"; //导入
