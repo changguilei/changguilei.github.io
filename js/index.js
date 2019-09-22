@@ -17,7 +17,7 @@ window.onload = function() {
     var w = $("body").width();
     $.ajax({
         url: 'js/index.json',
-        type: 'post',
+        type: 'get',
         dataType: 'text',
         success: function(msg) {
             eval("arr=" + msg);
